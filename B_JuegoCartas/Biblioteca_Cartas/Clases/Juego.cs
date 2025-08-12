@@ -38,60 +38,40 @@ namespace Biblioteca_Cartas.Clases
             this.controlAsServicio = controlAsServicio;
             this.comodinServicio = comodinServicio;
             this.inicializacionJuegoServicio = inicializacionJuegoServicio;
-            this.saldo = saldoInicial;
+            saldo = saldoInicial;
 
             InicializarJuego(apodoJugador);
         }
 
-        private void InicializarJuego(string apodoJugador)
-        {
+        private void InicializarJuego(string apodoJugador) =>
             (cartasBaraja, cartasCastigo, cartasPremio, resto, jugador, maquina) = inicializacionJuegoServicio.Inicializar(apodoJugador);
-        }
 
-        public string Apostar(int cantidadApostada)
-        {
-            int saldoFinal;
-            var resultado = apuestaServicio.Apostar(saldo, cantidadApostada, out saldoFinal);
-            saldo = saldoFinal;
-            return resultado;
-        }
+        public string Apostar(int cantidadApostada) =>
+            apuestaServicio.Apostar(saldo, cantidadApostada, out saldo);
 
         public int ObtenerSaldo() => saldo;
 
-        public void EntregarCartaAJugador(bool esJugador)
-        {
+        public void EntregarCartaAJugador(bool esJugador) =>
             cartasServicio.EntregarCarta(esJugador ? jugador : maquina, resto);
-        }
 
-        public void PedirCartasMaquina()
-        {
-            for (int i = 0; i < 2; i++)
-            {
-                int suma = maquina.cartas_jugador.Sum(c => c.Punto_carta);
-                if (suma <= 15)
+        public void PedirCartasMaquina() =>
+            Enumerable.Range(0, 2)
+                .Where(_ => maquina.cartas_jugador.Sum(c => c.Punto_carta) <= 15)
+                .ToList()
+                .ForEach(_ =>
                 {
                     cartasServicio.EntregarCarta(maquina, resto);
                     controlAsServicio.ControlAS(maquina.cartas_jugador);
                     comodinServicio.ComodinMaquina(maquina.cartas_jugador, resto);
-                }
-            }
-        }
+                });
 
-        public void Jugar(bool plantarse, int cantidadApostada)
-        {
-            if (plantarse)
-            {
-                int resultado = partidaServicio.CalcularResultado(jugador.cartas_jugador, maquina.cartas_jugador);
-                if (resultado == 1)
-                    saldo += (cantidadApostada * 2);
-                else if (resultado == 0)
-                    saldo += cantidadApostada;
-                // Si pierde, no suma nada
-            }
-            else
-            {
-                cartasServicio.EntregarCarta(jugador, resto);
-            }
-        }
+        public void Jugar(bool plantarse, int cantidadApostada) =>
+            plantarse
+                ? saldo += (partidaServicio.CalcularResultado(jugador.cartas_jugador, maquina.cartas_jugador) == 1
+                    ? cantidadApostada * 2
+                    : partidaServicio.CalcularResultado(jugador.cartas_jugador, maquina.cartas_jugador) == 0
+                        ? cantidadApostada
+                        : 0)
+                : cartasServicio.EntregarCarta(jugador, resto);
     }
 }
