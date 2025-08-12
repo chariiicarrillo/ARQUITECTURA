@@ -9,20 +9,20 @@ namespace Biblioteca_Cartas.Servicios
 {
     public class InicializacionJuegoServicio : IinicializacionJuegoServicio
     {
-        private readonly ICreacionCartasService creacionCartasServicio;
-        private readonly IMezclaCartasService mezclaCartasServicio;
-        private readonly IExtraccionCartaService extraccionCartaServicio;
-        private readonly ICartaService cartaServicio;
-        private readonly IASControlService controlAsServicio;
-        private readonly IComodinService comodinServicio;
+        private readonly ICreacionCartasServicio creacionCartasServicio;
+        private readonly IMezclaCartasServicio mezclaCartasServicio;
+        private readonly IExtraccionCartaServicio extraccionCartaServicio;
+        private readonly ICartaServicio cartaServicio;
+        private readonly IASControlServicio controlAsServicio;
+        private readonly IComodinServicio comodinServicio;
 
         public InicializacionJuegoServicio(
-            ICreacionCartasService creacionCartasServicio,
-            IMezclaCartasService mezclaCartasServicio,
-            IExtraccionCartaService extraccionCartaServicio,
-            ICartaService cartaServicio,
-            IASControlService controlAsServicio,
-            IComodinService comodinServicio)
+            ICreacionCartasServicio creacionCartasServicio,
+            IMezclaCartasServicio mezclaCartasServicio,
+            IExtraccionCartaServicio extraccionCartaServicio,
+            ICartaServicio cartaServicio,
+            IASControlServicio controlAsServicio,
+            IComodinServicio comodinServicio)
 
         {
             this.creacionCartasServicio = creacionCartasServicio;

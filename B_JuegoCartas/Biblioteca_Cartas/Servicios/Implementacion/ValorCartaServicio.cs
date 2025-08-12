@@ -8,7 +8,7 @@ namespace Biblioteca_Cartas.Servicios
         int DarValorCarta(string descripcion);
     }
 
-    public class ValorCartaService : IValorCartaService
+    public class ValorCartaServicio : IValorCartaService
     {
         private readonly Dictionary<string, int> valoresCartas = new Dictionary<string, int>
         {

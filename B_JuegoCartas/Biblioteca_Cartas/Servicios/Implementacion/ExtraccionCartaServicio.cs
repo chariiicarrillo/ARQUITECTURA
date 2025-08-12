@@ -4,7 +4,7 @@ using Biblioteca_Cartas.Clases;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class ExtraccionCartaService : IExtraccionCartaService
+    public class ExtraccionCartaServicio : IExtraccionCartaServicio
     {
         public Carta SacarCarta(List<Carta> cartas_restantes)
         {

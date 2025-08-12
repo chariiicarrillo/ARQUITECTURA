@@ -7,10 +7,10 @@ using Biblioteca_Cartas.Servicios;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class CreacionCartasService : ICreacionCartasService
+    public class CreacionCartasServicio : ICreacionCartasServicio
     {
         private readonly IValorCartaService valorCartaService;
-        public CreacionCartasService(IValorCartaService valorCartaService)
+        public CreacionCartasServicio(IValorCartaService valorCartaService)
         {
             this.valorCartaService = valorCartaService;
         }

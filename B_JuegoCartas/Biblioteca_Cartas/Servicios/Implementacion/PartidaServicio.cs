@@ -4,7 +4,7 @@ using Biblioteca_Cartas.Clases;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class PartidaService : IPartidaService
+    public class PartidaServicio : IPartidaServicio
     {
         public int CalcularResultado(List<Carta> cartasJugador, List<Carta> cartasMaquina)
         {

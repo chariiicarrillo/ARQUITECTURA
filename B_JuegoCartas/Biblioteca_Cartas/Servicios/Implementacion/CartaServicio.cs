@@ -2,7 +2,7 @@ using Biblioteca_Cartas.Clases;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class CartaService : ICartaService
+    public class CartaServicio : ICartaServicio
     {
         public void EntregarCartas(Jugador jugador, Resto resto, int cantidad)
         {

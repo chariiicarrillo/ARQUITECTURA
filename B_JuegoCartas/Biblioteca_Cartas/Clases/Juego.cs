@@ -7,11 +7,11 @@ namespace Biblioteca_Cartas.Clases
 {
     public class Juego
     {
-        private readonly IApuestaService apuestaServicio;
-        private readonly ICartaService cartasServicio;
-        private readonly IPartidaService partidaServicio;
-        private readonly IASControlService controlAsServicio;
-        private readonly IComodinService comodinServicio;
+        private readonly IApuestaServicio apuestaServicio;
+        private readonly ICartaServicio cartasServicio;
+        private readonly IPartidaServicio partidaServicio;
+        private readonly IASControlServicio controlAsServicio;
+        private readonly IComodinServicio comodinServicio;
         private readonly IinicializacionJuegoServicio inicializacionJuegoServicio;
 
         private List<Premio> cartasPremio;
@@ -25,11 +25,11 @@ namespace Biblioteca_Cartas.Clases
         public Juego(
             int saldoInicial,
             string apodoJugador,
-            IApuestaService apuestaServicio,
-            ICartaService cartasServicio,
-            IPartidaService partidaServicio,
-            IASControlService controlAsServicio,
-            IComodinService comodinServicio,
+            IApuestaServicio apuestaServicio,
+            ICartaServicio cartasServicio,
+            IPartidaServicio partidaServicio,
+            IASControlServicio controlAsServicio,
+            IComodinServicio comodinServicio,
             IinicializacionJuegoServicio inicializacionJuegoServicio)
         {
             this.apuestaServicio = apuestaServicio;

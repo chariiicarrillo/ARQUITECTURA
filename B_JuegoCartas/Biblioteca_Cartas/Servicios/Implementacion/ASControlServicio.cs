@@ -4,7 +4,7 @@ using Biblioteca_Cartas.Clases;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class ASControlService : IASControlService
+    public class ASControlServicio : IASControlServicio
     {
         public void ControlAS(List<Carta> cartasJugador)
         {

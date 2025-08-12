@@ -4,7 +4,7 @@ using Biblioteca_Cartas.Clases;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class MezclaCartasService : IMezclaCartasService
+    public class MezclaCartasServicio : IMezclaCartasServicio
     {
         public List<Carta> MezclarCartas(List<Carta> cartas)
         {

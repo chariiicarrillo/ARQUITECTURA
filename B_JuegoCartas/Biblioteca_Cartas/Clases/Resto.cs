@@ -8,12 +8,12 @@ namespace Biblioteca_Cartas.Clases
     {
         public List<Carta> cartas_restantes;
         public Carta c_sacada;
-        private readonly IMezclaCartasService mezclaService;
-        private readonly IExtraccionCartaService extraccionService;
+        private readonly IMezclaCartasServicio mezclaService;
+        private readonly IExtraccionCartaServicio extraccionService;
 
         public Resto(List<Baraja> cartas_Baraja, List<Premio> cartas_Premio, List<Castigo> cartas_Castigo,
-            IMezclaCartasService mezclaService,
-            IExtraccionCartaService extraccionService)
+            IMezclaCartasServicio mezclaService,
+            IExtraccionCartaServicio extraccionService)
         {
             this.mezclaService = mezclaService;
             this.extraccionService = extraccionService;

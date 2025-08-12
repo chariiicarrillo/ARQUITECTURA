@@ -4,7 +4,7 @@ using Biblioteca_Cartas.Clases;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class ComodinService : IComodinService
+    public class ComodinServicio : IComodinServicio
     {
         public void ComodinMaquina(List<Carta> cartasMaquina, Resto resto)
         {

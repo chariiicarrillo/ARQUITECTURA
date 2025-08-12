@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class ApuestaService : IApuestaService
+    public class ApuestaServicio : IApuestaServicio
     {
         public string Apostar(int saldoActual, int cantidadApostada, out int saldoFinal)
         {

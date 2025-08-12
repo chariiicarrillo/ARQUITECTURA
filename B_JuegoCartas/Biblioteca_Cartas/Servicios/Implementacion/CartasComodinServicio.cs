@@ -10,7 +10,7 @@ namespace Biblioteca_Cartas.Servicios
         int SumaPComodin(List<Carta> cartasJugador);
     }
 
-    public class CartasComodinService : ICartasComodinService
+    public class CartasComodinServicio : ICartasComodinService
     {
         public int SumaPComodin(List<Carta> cartasJugador)
         {
