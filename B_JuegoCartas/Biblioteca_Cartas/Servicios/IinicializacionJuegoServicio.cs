@@ -7,12 +7,9 @@ using System.Threading.Tasks;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class IinicializacionJuegoServicio
+    public interface IInicializacionJuegoServicio
     {
-        public (List<Baraja> baraja, List<Castigo> castigos, List<Premio> premios, Resto resto, Jugador jugador, Jugador maquina) Inicializar(string apodoJugador)
-        {
-            throw new NotImplementedException();
-        }
+        (List<Baraja> baraja, List<Castigo> castigos, List<Premio> premios, Resto resto, Jugador jugador, Jugador maquina) Inicializar(string apodoJugador);
     }
 }
 

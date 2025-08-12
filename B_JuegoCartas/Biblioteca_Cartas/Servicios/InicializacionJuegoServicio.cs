@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca_Cartas.Servicios
 {
-    public class InicializacionJuegoServicio : IinicializacionJuegoServicio
+    public class InicializacionJuegoServicio : IInicializacionJuegoServicio
     {
         private readonly ICreacionCartasService creacionCartasServicio;
         private readonly IMezclaCartasService mezclaCartasServicio;

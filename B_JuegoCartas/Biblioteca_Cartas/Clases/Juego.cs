@@ -12,7 +12,7 @@ namespace Biblioteca_Cartas.Clases
         private readonly IPartidaService partidaServicio;
         private readonly IASControlService controlAsServicio;
         private readonly IComodinService comodinServicio;
-        private readonly IinicializacionJuegoServicio inicializacionJuegoServicio;
+        private readonly IInicializacionJuegoServicio inicializacionJuegoServicio;
 
         private List<Premio> cartasPremio;
         private List<Castigo> cartasCastigo;
@@ -30,7 +30,7 @@ namespace Biblioteca_Cartas.Clases
             IPartidaService partidaServicio,
             IASControlService controlAsServicio,
             IComodinService comodinServicio,
-            IinicializacionJuegoServicio inicializacionJuegoServicio)
+            IInicializacionJuegoServicio inicializacionJuegoServicio)
         {
             this.apuestaServicio = apuestaServicio;
             this.cartasServicio = cartasServicio;
