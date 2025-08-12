@@ -50,6 +50,7 @@
     <Compile Include="Clases\Premio.cs" />
     <Compile Include="Clases\Resto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="Servicios\ApuestaService.cs" />
     <Compile Include="Servicios\ASControlService.cs" />
     <Compile Include="Servicios\CartasComodinService.cs" />
@@ -70,6 +71,28 @@
     <Compile Include="Servicios\MezclaCartasService.cs" />
     <Compile Include="Servicios\PartidaService.cs" />
     <Compile Include="Servicios\ValorCartaService.cs" />
+=======
+    <Compile Include="Servicios\Implementacion\ApuestaServicio.cs" />
+    <Compile Include="Servicios\Implementacion\ASControlServicio.cs" />
+    <Compile Include="Servicios\Implementacion\CartasComodinServicio.cs" />
+    <Compile Include="Servicios\Implementacion\CartaServicio.cs" />
+    <Compile Include="Servicios\Implementacion\ComodinServicio.cs" />
+    <Compile Include="Servicios\Implementacion\CreacionCartasServicio.cs" />
+    <Compile Include="Servicios\Implementacion\ExtraccionCartaServicio.cs" />
+    <Compile Include="Servicios\Interfaces\IApuestaServicio.cs" />
+    <Compile Include="Servicios\Interfaces\IASControlServicio.cs" />
+    <Compile Include="Servicios\Interfaces\ICartaServicio.cs" />
+    <Compile Include="Servicios\Interfaces\IComodinServicio.cs" />
+    <Compile Include="Servicios\Interfaces\ICreacionCartasServicio.cs" />
+    <Compile Include="Servicios\Interfaces\IExtraccionCartaServicio.cs" />
+    <Compile Include="Servicios\Interfaces\IinicializacionJuegoServicio.cs" />
+    <Compile Include="Servicios\Interfaces\IMezclaCartasServicio.cs" />
+    <Compile Include="Servicios\Implementacion\InicializacionJuegoServicio.cs" />
+    <Compile Include="Servicios\Interfaces\IPartidaServicio.cs" />
+    <Compile Include="Servicios\Implementacion\MezclaCartasServicio.cs" />
+    <Compile Include="Servicios\Implementacion\PartidaServicio.cs" />
+    <Compile Include="Servicios\Implementacion\ValorCartaServicio.cs" />
+>>>>>>> 0f969eec2ae0e9ce9920dc5bf0e0aba6fb677fc6
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
